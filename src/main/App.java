@@ -1,4 +1,5 @@
 package main;
+import main.Ejercicio_03_listLeves.ListLevels;
 import main.Materia.Controllers.ArbolBinario;
 import main.Materia.Models.Node;
 /*
@@ -8,8 +9,8 @@ import main.Materia.Models.Node;
  *        2              3
  *      /    \          /
  *    4       5        6
- *  /   \
- * 7    8
+ *  /        /
+ * 7        8
  * 
  * 
  */
@@ -37,5 +38,8 @@ public class App {
         System.out.println("\nInOrder-Recursivo");
         arbolBinario.inOrderRecursivo(nodeRoot);
         
+        ListLevels levels=new ListLevels();
+        
+        levels.listLevels(nodeRoot);
     }
 }
