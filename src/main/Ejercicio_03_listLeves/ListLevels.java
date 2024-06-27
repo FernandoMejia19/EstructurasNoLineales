@@ -10,18 +10,18 @@ public class ListLevels {
         return resp;
     }
 
-        private void auxList(Node root,int nivel,List<List<Node>> resp){
-            if(root==null){
-                return;
-            }
-            if(nivel==resp.size()){
-                resp.add(new ArrayList<>());
-            }
-            resp.get(nivel).add(root);
-            auxList(root.getLeft(),nivel+1,resp);
-            auxList(root.getRight(),nivel+1,resp);
-
+    private void auxList(Node root,int nivel,List<List<Node>> resp){
+        if(root==null){
+            return;
         }
+        if(nivel==resp.size()){
+            resp.add(new ArrayList<>());
+        }
+        resp.get(nivel).add(root);
+        auxList(root.getLeft(),nivel+1,resp);
+        auxList(root.getRight(),nivel+1,resp);
+
+    }
         
         
 }

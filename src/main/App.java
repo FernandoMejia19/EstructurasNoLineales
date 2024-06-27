@@ -1,5 +1,6 @@
 package main;
 import main.Ejercicio_03_listLeves.ListLevels;
+import main.Materia.Controllers.AVLTree;
 import main.Materia.Controllers.ArbolBinario;
 import main.Materia.Models.Node;
 /*
@@ -41,5 +42,15 @@ public class App {
         ListLevels levels=new ListLevels();
         
         levels.listLevels(nodeRoot);
+       
+        
+        AVLTree tree = new AVLTree();
+
+        int [] values = { 10, 20, 15, 24, 9, 8, 21, 23, 50, 25 };
+
+        for (int value : values) {
+            tree.insert(value);
+        }
+        
     }
 }
