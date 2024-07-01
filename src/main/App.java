@@ -2,7 +2,9 @@ package main;
 import main.Ejercicio_03_listLeves.ListLevels;
 import main.Materia.Controllers.AVLTree;
 import main.Materia.Controllers.ArbolBinario;
+import main.Materia.Controllers.Graph;
 import main.Materia.Models.Node;
+import main.Materia.Models.NodeGraph;
 /*
  *            ____1___
  *           /        \
@@ -51,6 +53,28 @@ public class App {
         for (int value : values) {
             tree.insert(value);
         }
+
+        runGraph();
         
+    }
+
+    private static void runGraph() {
+        Graph graph=new Graph();
+        //agregar nodos
+        NodeGraph node1=graph.addNode(1);
+        NodeGraph node2=graph.addNode(2);
+        NodeGraph node3=graph.addNode(3);
+        NodeGraph node4=graph.addNode(4);
+        NodeGraph node5=graph.addNode(5);
+
+        graph.addEdge(node1, node2);
+        graph.addEdge(node2, node4);
+        graph.addEdge(node4, node5);
+        graph.addEdge(node1, node3);
+        
+        graph.printGraph();
+
+
+
     }
 }
