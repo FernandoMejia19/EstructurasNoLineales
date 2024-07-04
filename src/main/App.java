@@ -3,6 +3,7 @@ import main.Ejercicio_03_listLeves.ListLevels;
 import main.Materia.Controllers.AVLTree;
 import main.Materia.Controllers.ArbolBinario;
 import main.Materia.Controllers.Graph;
+import main.Materia.Controllers.Sets;
 import main.Materia.Models.Node;
 import main.Materia.Models.NodeGraph;
 /*
@@ -55,7 +56,11 @@ public class App {
         }
 
         runGraph();
-        
+        runSest();
+    }
+
+    private static void runSest() {
+        new Sets();
     }
 
     private static void runGraph() {
